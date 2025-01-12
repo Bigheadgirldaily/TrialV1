@@ -1,47 +1,26 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.test.ui.theme.TestTheme
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import com.example.test.databinding.ActivitySummaryBinding
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySummaryBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            TestTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        Log.d("MainActivity", "onCreate called")
+        binding = ActivitySummaryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.buttonOctober.setOnClickListener {
+            Log.d("MainActivity", "buttonOctober clicked")
+            val intent = Intent(this, OctoberActivity::class.java)
+            startActivity(intent)
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TestTheme {
-        Greeting("Android")
+        // Set OnClickListener for other months similarly
     }
 }
