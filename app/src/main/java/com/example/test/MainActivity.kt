@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivitySummaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonOctober.setOnClickListener {
-            Log.d("MainActivity", "buttonOctober clicked")
+        binding.octButton.setOnClickListener {
+            Log.d("MainActivity", "octButton clicked")
             val intent = Intent(this, OctoberActivity::class.java)
             startActivity(intent)
         }
