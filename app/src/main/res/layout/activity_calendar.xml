@@ -1,33 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".OctoberActivity">
 
-    <!-- Month TextView -->
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Navigation Arrow -->
+        <Button
+            android:id="@+id/button2025"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025年" />
+
+        <!-- Spacer to push buttons to the right -->
+
+        <!-- Search Icon -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonSearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/search"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_search" />
+
+        <!-- Add Button -->
+        <ImageButton
+            android:id="@+id/buttonAdd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/add"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add" />
+    </LinearLayout>
+
+    <!-- Month Display -->
     <TextView
         android:id="@+id/monthTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10月"
-        android:textSize="24sp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginTop="16dp" />
 
-    <!-- Days of the Week -->
+    <!-- Days of the Week Grid -->
     <GridLayout
         android:id="@+id/daysOfWeekGridLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:columnCount="7"
-        app:layout_constraintTop_toBottomOf="@id/monthTextView"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="8dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthTextView">
 
         <TextView
             android:layout_width="0dp"
@@ -86,369 +131,363 @@
             android:textStyle="bold" />
     </GridLayout>
 
-    <!-- GridLayout for Days of the Month -->
+    <!-- Calendar Grid -->
     <GridLayout
         android:id="@+id/daysOfMonthGridLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="438dp"
+        android:layout_height="620dp"
+        android:layout_marginTop="8dp"
         android:columnCount="7"
         android:rowCount="6"
-        app:layout_constraintTop_toBottomOf="@id/daysOfWeekGridLayout"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daysOfWeekGridLayout"
+        app:layout_constraintVertical_bias="0.0">
 
         <!-- Days of the Month -->
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="1"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="2"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="3"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="4"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="5"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="6"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="7"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="8"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="9"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="10"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="11"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="12"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="13"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="14"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="15"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="16"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="17"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="18"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="19"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="20"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="21"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="22"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="23"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="24"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="25"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="26"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="27"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="28"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="29"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="30"
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:background="#E0E0E0"
             android:gravity="center"
             android:padding="8dp"
-            android:background="#E0E0E0"
             android:text="31"
             android:textColor="#000000" />
 
     </GridLayout>
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
