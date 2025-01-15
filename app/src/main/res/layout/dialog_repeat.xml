@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:showDividers="middle"
+    android:divider="?android:attr/dividerVertical"
+    android:dividerPadding="8dp">
+
+    <!-- Button 1: Never -->
+    <Button
+        android:id="@+id/buttonNever"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Never"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="永不" />
+
+    <!-- Button 2: Daily -->
+    <Button
+        android:id="@+id/buttonDaily"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="每日"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Daily" />
+
+    <!-- Button 3: Weekly -->
+    <Button
+        android:id="@+id/buttonWeekly"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="每星期"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Weekly" />
+
+    <!-- Button 4: Every 2 Weeks -->
+    <Button
+        android:id="@+id/buttonEvery2Weeks"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="每2星期"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Every 2 Weeks" />
+
+    <!-- Button 5: Monthly -->
+    <Button
+        android:id="@+id/buttonMonthly"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="每月"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Monthly" />
+
+    <!-- Button 6: Yearly -->
+    <Button
+        android:id="@+id/buttonYearly"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="每年"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Yearly" />
+
+    <!-- Button 7: Custom -->
+    <Button
+        android:id="@+id/buttonCustom"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="自訂"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Custom" />
+
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:padding="16dp"
+    tools:context=".AddScheduleActivity">
+
+    <!-- Top Buttons -->
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="新增"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Title Input -->
+    <EditText
+        android:id="@+id/inputTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="標題"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Content Input -->
+    <EditText
+        android:id="@+id/inputContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="內容"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/inputTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- All Day Label and Checkbox -->
+    <TextView
+        android:id="@+id/labelAllDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全日"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/inputContent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxAllDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/labelAllDay"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Start Label and Input -->
+    <TextView
+        android:id="@+id/labelStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="開始"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxAllDay"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/inputStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter start date"
+        android:textSize="16sp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/labelStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- End Label and Input -->
+    <TextView
+        android:id="@+id/labelEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="結束"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/inputStart"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/inputEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter end date"
+        android:textSize="16sp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/labelEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Repeat Button -->
+    <Button
+        android:id="@+id/buttonRepeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="重複"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/inputEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Reminder Label and Input -->
+    <TextView
+        android:id="@+id/labelReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRepeat"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/inputReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter reminder settings"
+        android:textSize="16sp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/labelReminder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
