@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:showDividers="middle"
+        android:divider="?android:attr/dividerVertical"
+        android:dividerPadding="8dp">
+
+        <!-- Button 1: Never -->
+        <Button
+            android:id="@+id/buttonNone"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="None"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="無" />
+
+        <!-- Button 2: Daily -->
+        <Button
+            android:id="@+id/buttonStartOfEvent"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="行程開始時"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="StartOfEvent" />
+
+        <!-- Button 3: Weekly -->
+        <Button
+            android:id="@+id/button5MinutesBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="5分鐘前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="5 minutes before" />
+
+        <!-- Button 4: Every 2 Weeks -->
+        <Button
+            android:id="@+id/button10MinutesBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="10分鐘前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="10 minutes before" />
+
+        <!-- Button 5: Monthly -->
+        <Button
+            android:id="@+id/button15MinutesBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="15分鐘前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="15 minutes before" />
+
+        <!-- Button 6: Yearly -->
+        <Button
+            android:id="@+id/button30MinutesBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="30分鐘前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="30 minutes before" />
+
+        <!-- Button 7: Custom -->
+        <Button
+            android:id="@+id/button1HourBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="1小時前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="1 hour before" />
+
+        <Button
+            android:id="@+id/button2HoursBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="2小時前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="2 hours before" />
+
+        <Button
+            android:id="@+id/button1DayBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="1日前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="1 day before" />
+
+        <Button
+            android:id="@+id/button2DaysBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="2日前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="2 days before" />
+
+        <Button
+            android:id="@+id/button1WeekBefore"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="1星期前"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="1 week before" />
+
+    </LinearLayout>
+</ScrollView>

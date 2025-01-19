@@ -1,9 +1,11 @@
 package com.example.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.PopupWindow
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +35,14 @@ class OctoberActivity : AppCompatActivity() {
             ViewGroup.LayoutParams.WRAP_CONTENT,
             ViewGroup.LayoutParams.WRAP_CONTENT,
             true)
+
+        // Set up the OnClickListener for buttonSchedule
+        val buttonSchedule: Button = popupView.findViewById(R.id.buttonSchedule)
+        buttonSchedule.setOnClickListener {
+            val intent = Intent(this, AddScheduleActivity::class.java)
+            startActivity(intent)
+            popupWindow.dismiss() // Close the popup window
+        }
 
         // Calculate the offset in pixels (5cm = 50mm, 50cm = 500mm, 1 inch = 25.4mm, 1 inch = 160dp)
         val offset5cm = (5 / 25.4 * 160).toInt()

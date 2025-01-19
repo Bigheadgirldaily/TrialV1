@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".OctoberActivity" />
+        <activity android:name=".AddScheduleActivity" />
     </application>
 
 </manifest>
